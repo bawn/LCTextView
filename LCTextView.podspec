@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/bawn/LCTextView"
   s.license          = 'MIT'
   s.author           = { "bawn" => "lc5491137@gmail.com" }
-  s.source           = { :git => "https://github.com/bawn/LCTextView.git", :tag => "1.1.0" }
+  s.source           = { :git => "https://github.com/bawn/LCTextView.git", :tag => s.version.to_s }
   s.platform         = :ios, '7.0'
   s.requires_arc     = true
   s.frameworks       = 'Foundation', 'UIKit'
