@@ -24,7 +24,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="请输入意见"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="请输入"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontSize">
                                         <real key="value" value="14"/>
                                     </userDefinedRuntimeAttribute>
@@ -55,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-148" y="295"/>
+            <point key="canvasLocation" x="-64" y="294"/>
         </scene>
     </scenes>
 </document>
