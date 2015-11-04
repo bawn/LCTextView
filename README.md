@@ -4,7 +4,7 @@
 ![Pod version](http://img.shields.io/cocoapods/v/LCTextView.svg?style=flat)
 ![Platform info](http://img.shields.io/cocoapods/p/LCTextView.svg?style=flat)
 
-支持 placeholder 的UITextview
+支持 placeholder 的 UITextview
 
 ![1](demo.png)
 
@@ -17,7 +17,7 @@ pod 'LCTextView'
 
 ##功能
 
-支持直接在IB中设置属性
+支持直接在IB中设置属性，无需一行代码即可建立一个带有 placeholder 功能的 UITextview
 
 ![2](stroyboard.jpeg)
 
