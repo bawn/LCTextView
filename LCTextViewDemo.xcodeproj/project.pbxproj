@@ -15,7 +15,7 @@
 		DF14CCA51BE0635A00801E12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF14CCA31BE0635A00801E12 /* LaunchScreen.storyboard */; };
 		DF14CCB01BE0635B00801E12 /* LCTextViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF14CCAF1BE0635B00801E12 /* LCTextViewDemoTests.m */; };
 		DF14CCBB1BE0635B00801E12 /* LCTextViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF14CCBA1BE0635B00801E12 /* LCTextViewDemoUITests.m */; };
-		DF14CCCA1BE0638700801E12 /* LCTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF14CCC91BE0638700801E12 /* LCTextView.m */; };
+		DF6705681BE9F6F000AE4E8A /* LCTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6705671BE9F6F000AE4E8A /* LCTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +52,8 @@
 		DF14CCB61BE0635B00801E12 /* LCTextViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LCTextViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF14CCBA1BE0635B00801E12 /* LCTextViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCTextViewDemoUITests.m; sourceTree = "<group>"; };
 		DF14CCBC1BE0635B00801E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DF14CCC81BE0638700801E12 /* LCTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCTextView.h; sourceTree = "<group>"; };
-		DF14CCC91BE0638700801E12 /* LCTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCTextView.m; sourceTree = "<group>"; };
+		DF6705661BE9F6F000AE4E8A /* LCTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCTextView.h; sourceTree = "<group>"; };
+		DF6705671BE9F6F000AE4E8A /* LCTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +104,11 @@
 		DF14CC941BE0635A00801E12 /* LCTextViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DF6705651BE9F6F000AE4E8A /* LCTextView */,
 				DF14CC981BE0635A00801E12 /* AppDelegate.h */,
 				DF14CC991BE0635A00801E12 /* AppDelegate.m */,
 				DF14CC9B1BE0635A00801E12 /* ViewController.h */,
 				DF14CC9C1BE0635A00801E12 /* ViewController.m */,
-				DF14CCC81BE0638700801E12 /* LCTextView.h */,
-				DF14CCC91BE0638700801E12 /* LCTextView.m */,
 				DF14CC9E1BE0635A00801E12 /* Main.storyboard */,
 				DF14CCA11BE0635A00801E12 /* Assets.xcassets */,
 				DF14CCA31BE0635A00801E12 /* LaunchScreen.storyboard */,
@@ -144,6 +143,15 @@
 			);
 			path = LCTextViewDemoUITests;
 			sourceTree = "<group>";
+		};
+		DF6705651BE9F6F000AE4E8A /* LCTextView */ = {
+			isa = PBXGroup;
+			children = (
+				DF6705661BE9F6F000AE4E8A /* LCTextView.h */,
+				DF6705671BE9F6F000AE4E8A /* LCTextView.m */,
+			);
+			path = LCTextView;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -280,7 +288,7 @@
 			files = (
 				DF14CC9D1BE0635A00801E12 /* ViewController.m in Sources */,
 				DF14CC9A1BE0635A00801E12 /* AppDelegate.m in Sources */,
-				DF14CCCA1BE0638700801E12 /* LCTextView.m in Sources */,
+				DF6705681BE9F6F000AE4E8A /* LCTextView.m in Sources */,
 				DF14CC971BE0635A00801E12 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +513,7 @@
 				DF14CCC11BE0635B00801E12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF14CCC21BE0635B00801E12 /* Build configuration list for PBXNativeTarget "LCTextViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +522,7 @@
 				DF14CCC41BE0635B00801E12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF14CCC51BE0635B00801E12 /* Build configuration list for PBXNativeTarget "LCTextViewDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +531,7 @@
 				DF14CCC71BE0635B00801E12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

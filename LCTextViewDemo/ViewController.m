@@ -19,10 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.textView.leadingConstant = 10.0f;
-    self.textView.topConstant = 10.0f;
-    self.textView.placeholder = @"请输入";
-    self.textView.placeholderColor = [[UIColor grayColor] colorWithAlphaComponent:0.7f];
+//    self.textView.leadingConstant = 10.0f;
+//    self.textView.topConstant = 10.0f;
+//    self.textView.placeholder = @"请输入";
+//    self.textView.placeholderColor = [[UIColor grayColor] colorWithAlphaComponent:0.7f];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

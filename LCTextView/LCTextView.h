@@ -11,9 +11,9 @@
 @interface LCTextView : UITextView
 
 @property (nonatomic, strong) IBInspectable NSString *placeholder;
-@property (nonatomic, strong) IBInspectable UIColor *placeholderColor;
-@property (nonatomic, assign) IBInspectable CGFloat placeholderFontSize;
-@property (nonatomic, assign) IBInspectable CGFloat topConstant;
-@property (nonatomic, assign) IBInspectable CGFloat leadingConstant;
+@property (nonatomic, strong) IBInspectable UIColor *phColor;
+@property (nonatomic, assign) IBInspectable CGFloat phFontSize;
+@property (nonatomic, assign) IBInspectable CGFloat topSpace;
+@property (nonatomic, assign) IBInspectable CGFloat leadingSpace;
 
 @end

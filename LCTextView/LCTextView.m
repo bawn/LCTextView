@@ -43,11 +43,11 @@ static CGFloat const LCLeadingOffset = 3.0f;
     self.placeholderLabel.translatesAutoresizingMaskIntoConstraints = NO;
     
     self.placeholderLabel.text = _placeholder ? : LCPlaceholderString;
-    self.placeholderLabel.textColor = _placeholderColor ? : [[UIColor grayColor] colorWithAlphaComponent:0.7f];
-    self.placeholderLabel.font = [UIFont systemFontOfSize:_placeholderFontSize ? : 13.0f];
+    self.placeholderLabel.textColor = _phColor ? : [[UIColor grayColor] colorWithAlphaComponent:0.7f];
+    self.placeholderLabel.font = [UIFont systemFontOfSize:_phFontSize ? : 13.0f];
     [self addSubview:_placeholderLabel];
-    self.placeholderLeadingCon = [NSLayoutConstraint constraintWithItem:_placeholderLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeading multiplier:1.0f constant:_leadingConstant ? : LCPlaceholderLeading];
-    self.placeholderTopCon = [NSLayoutConstraint constraintWithItem:_placeholderLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0f constant:_topConstant ? : LCPlaceholderTop];
+    self.placeholderLeadingCon = [NSLayoutConstraint constraintWithItem:_placeholderLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeading multiplier:1.0f constant:_leadingSpace ? : LCPlaceholderLeading];
+    self.placeholderTopCon = [NSLayoutConstraint constraintWithItem:_placeholderLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0f constant:_topSpace ? : LCPlaceholderTop];
     [self addConstraints:@[_placeholderTopCon, _placeholderLeadingCon]];
     [self changeContainerInset];
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -57,7 +57,7 @@ static CGFloat const LCLeadingOffset = 3.0f;
 }
 
 - (void)changeContainerInset{
-    self.textContainerInset = (UIEdgeInsets){_topConstant ? : LCPlaceholderTop, _leadingConstant ? _leadingConstant - LCLeadingOffset : LCPlaceholderLeading - LCLeadingOffset, 0.0f, 0.0f};
+    self.textContainerInset = (UIEdgeInsets){_topSpace ? : LCPlaceholderTop, _leadingSpace ? _leadingSpace - LCLeadingOffset : LCPlaceholderLeading - LCLeadingOffset, 0.0f, 0.0f};
 }
 
 - (void)setPlaceholder:(NSString *)placeholder{
@@ -66,27 +66,29 @@ static CGFloat const LCLeadingOffset = 3.0f;
 }
 
 
-- (void)setPlaceholderColor:(UIColor *)placeholderColor{
-    _placeholderColor = placeholderColor;
-    self.placeholderLabel.textColor = _placeholderColor ? : [[UIColor grayColor] colorWithAlphaComponent:0.7f];
+- (void)setPhColor:(UIColor *)phColor{
+    _phColor = phColor;
+    self.placeholderLabel.textColor = _phColor ? : [[UIColor grayColor] colorWithAlphaComponent:0.7f];
 }
 
-- (void)setPlaceholderFontSize:(CGFloat)placeholderFontSize{
-    _placeholderFontSize = placeholderFontSize;
-    self.placeholderLabel.font = [UIFont systemFontOfSize:_placeholderFontSize ? : 13.0f];
+- (void)setPhFontSize:(CGFloat)phFontSize{
+    _phFontSize = phFontSize;
+    self.placeholderLabel.font = [UIFont systemFontOfSize:_phFontSize ? : 13.0f];
 }
 
-- (void)setTopConstant:(CGFloat)topConstant{
-    _topConstant = topConstant;
-    self.placeholderTopCon.constant = _topConstant;
+- (void)setTopSpace:(CGFloat)topSpace{
+    _topSpace = topSpace;
+    self.placeholderTopCon.constant = _topSpace;
+    [self changeContainerInset];
+
+}
+
+- (void)setLeadingSpace:(CGFloat)leadingSpace{
+    _leadingSpace = leadingSpace;
+    self.placeholderLeadingCon.constant = _leadingSpace;
     [self changeContainerInset];
 }
 
-- (void)setLeadingConstant:(CGFloat)leadingConstant{
-    _leadingConstant = leadingConstant;
-    self.placeholderLeadingCon.constant = _leadingConstant;
-    [self changeContainerInset];
-}
 
 - (void)textDidChange:(NSNotification *)notification{
     self.placeholderLabel.hidden = self.text.length;
