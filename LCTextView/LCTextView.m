@@ -46,14 +46,24 @@ static CGFloat const LCLeadingOffset = 3.0f;
     self.placeholderLabel.textColor = _phColor ? : [[UIColor grayColor] colorWithAlphaComponent:0.7f];
     self.placeholderLabel.font = [UIFont systemFontOfSize:_phFontSize ? : 13.0f];
     [self addSubview:_placeholderLabel];
+    
     self.placeholderLeadingCon = [NSLayoutConstraint constraintWithItem:_placeholderLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeading multiplier:1.0f constant:_leadingSpace ? : LCPlaceholderLeading];
     self.placeholderTopCon = [NSLayoutConstraint constraintWithItem:_placeholderLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0f constant:_topSpace ? : LCPlaceholderTop];
     [self addConstraints:@[_placeholderTopCon, _placeholderLeadingCon]];
     [self changeContainerInset];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(textDidChange:)
                                                  name:UITextViewTextDidChangeNotification
                                                object:self];
+    [self addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:NULL];
+}
+
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
+    if ([keyPath isEqualToString:@"text"] && [change[NSKeyValueChangeNewKey] length]) {
+        self.placeholderLabel.hidden = YES;
+    }
 }
 
 - (void)changeContainerInset{
@@ -97,6 +107,7 @@ static CGFloat const LCLeadingOffset = 3.0f;
 
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self removeObserver:self forKeyPath:@"text"];
 }
 
 @end

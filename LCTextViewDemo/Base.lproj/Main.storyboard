@@ -25,17 +25,14 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="请输入"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontSize">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="phFontSize">
                                         <real key="value" value="14"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="topSpace">
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="topConstant">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="leadingConstant">
-                                        <real key="value" value="20"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leadingSpace">
+                                        <real key="value" value="14"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
