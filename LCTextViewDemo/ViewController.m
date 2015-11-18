@@ -24,7 +24,7 @@
 //    self.textView.placeholder = @"请输入";
 //    self.textView.placeholderColor = [[UIColor grayColor] colorWithAlphaComponent:0.7f];
     // Do any additional setup after loading the view, typically from a nib.
-    
+//    self.textView.text = @"12";
 }
 
 - (void)didReceiveMemoryWarning {

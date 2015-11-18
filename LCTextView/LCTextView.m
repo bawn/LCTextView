@@ -9,8 +9,6 @@
 #import "LCTextView.h"
 
 static NSString *const LCPlaceholderString = @"请输入";
-static CGFloat const LCPlaceholderLeading = 10.0f;
-static CGFloat const LCPlaceholderTop = 15.0f;
 static CGFloat const LCLeadingOffset = 3.0f;
 
 @interface LCTextView ()
@@ -47,8 +45,8 @@ static CGFloat const LCLeadingOffset = 3.0f;
     self.placeholderLabel.font = [UIFont systemFontOfSize:_phFontSize ? : 13.0f];
     [self addSubview:_placeholderLabel];
     
-    self.placeholderLeadingCon = [NSLayoutConstraint constraintWithItem:_placeholderLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeading multiplier:1.0f constant:_leadingSpace ? : LCPlaceholderLeading];
-    self.placeholderTopCon = [NSLayoutConstraint constraintWithItem:_placeholderLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0f constant:_topSpace ? : LCPlaceholderTop];
+    self.placeholderLeadingCon = [NSLayoutConstraint constraintWithItem:_placeholderLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeading multiplier:1.0f constant:_leadingSpace];
+    self.placeholderTopCon = [NSLayoutConstraint constraintWithItem:_placeholderLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0f constant:_topSpace];
     [self addConstraints:@[_placeholderTopCon, _placeholderLeadingCon]];
     [self changeContainerInset];
     
@@ -67,7 +65,7 @@ static CGFloat const LCLeadingOffset = 3.0f;
 }
 
 - (void)changeContainerInset{
-    self.textContainerInset = (UIEdgeInsets){_topSpace ? : LCPlaceholderTop, _leadingSpace ? _leadingSpace - LCLeadingOffset : LCPlaceholderLeading - LCLeadingOffset, 0.0f, 0.0f};
+    self.textContainerInset = (UIEdgeInsets){_topSpace, _leadingSpace - LCLeadingOffset, 0.0f, 0.0f};
 }
 
 - (void)setPlaceholder:(NSString *)placeholder{
