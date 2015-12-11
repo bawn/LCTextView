@@ -54,12 +54,25 @@ static CGFloat const LCLeadingOffset = 3.0f;
                                              selector:@selector(textDidChange:)
                                                  name:UITextViewTextDidChangeNotification
                                                object:self];
-    [self addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:NULL];
 }
 
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
     if ([keyPath isEqualToString:@"text"] && [change[NSKeyValueChangeNewKey] length]) {
+        self.placeholderLabel.hidden = YES;
+    }
+}
+
+- (void)setText:(NSString *)text{
+    [super setText:text];
+    if (text) {
+        self.placeholderLabel.hidden = YES;
+    }
+}
+
+- (void)setAttributedText:(NSAttributedString *)attributedText{
+    [super setAttributedText:attributedText];
+    if (attributedText) {
         self.placeholderLabel.hidden = YES;
     }
 }
