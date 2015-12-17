@@ -32,7 +32,7 @@ self.textView.placeholderColor = [[UIColor grayColor] colorWithAlphaComponent:0.
 ```
 
 ##要求
-* iOS 7 或更高
+* iOS 6 或更高
 * ARC
 
 ##License
