@@ -72,7 +72,7 @@ static CGFloat const LCLeadingOffset = 3.0f;
 
 - (void)setAttributedText:(NSAttributedString *)attributedText{
     [super setAttributedText:attributedText];
-    if (attributedText) {
+    if ([attributedText length]) {
         self.placeholderLabel.hidden = YES;
     }
 }
@@ -118,7 +118,6 @@ static CGFloat const LCLeadingOffset = 3.0f;
 
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [self removeObserver:self forKeyPath:@"text"];
 }
 
 @end

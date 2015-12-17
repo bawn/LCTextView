@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "LCTextView"
-  s.version          = "1.0.3"
+  s.version          = "1.0.4"
   s.summary          = "UITextview with placeholder 支持placeholder的UITextview"
   s.homepage         = "https://github.com/bawn/LCTextView"
   s.license          = 'MIT'
