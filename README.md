@@ -10,7 +10,7 @@
 ![1](demo.png)
 
 ##使用
-Cocoapods:
+CocoaPods:
 
 ```
 pod 'LCTextView'
