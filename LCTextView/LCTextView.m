@@ -65,18 +65,17 @@ static CGFloat const LCLeadingOffset = 3.0f;
 
 - (void)setText:(NSString *)text{
     [super setText:text];
-    if (text) {
+    if (text && text.length) {
         self.placeholderLabel.hidden = YES;
     }
 }
 
 - (void)setAttributedText:(NSAttributedString *)attributedText{
     [super setAttributedText:attributedText];
-    if ([attributedText length]) {
+    if (attributedText && [attributedText length]) {
         self.placeholderLabel.hidden = YES;
     }
 }
-
 - (void)changeContainerInset{
     self.textContainerInset = (UIEdgeInsets){_topSpace, _leadingSpace - LCLeadingOffset, 0.0f, 0.0f};
 }
