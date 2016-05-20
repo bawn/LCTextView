@@ -3,13 +3,14 @@
 ![License MIT](https://img.shields.io/dub/l/vibe-d.svg)
 ![Pod version](http://img.shields.io/cocoapods/v/LCTextView.svg?style=flat)
 ![Platform info](http://img.shields.io/cocoapods/p/LCTextView.svg?style=flat)
+[![Support](https://img.shields.io/badge/support-iOS%206%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)
 
 支持 placeholder 的 UITextview
 
 ![1](demo.png)
 
 ##使用
-Cocoapods:
+CocoaPods:
 
 ```
 pod 'LCTextView'
@@ -32,7 +33,7 @@ self.textView.placeholderColor = [[UIColor grayColor] colorWithAlphaComponent:0.
 ```
 
 ##要求
-* iOS 7 或更高
+* iOS 6 或更高
 * ARC
 
 ##License
