@@ -77,7 +77,7 @@ static CGFloat const LCLeadingOffset = 3.0f;
     }
 }
 - (void)changeContainerInset{
-    self.textContainerInset = (UIEdgeInsets){_topSpace, _leadingSpace - LCLeadingOffset, 0.0f, 0.0f};
+    self.textContainerInset = (UIEdgeInsets){_topSpace, _leadingSpace - LCLeadingOffset, 0.0f, _leadingSpace - LCLeadingOffset};
 }
 
 - (void)setPlaceholder:(NSString *)placeholder{
