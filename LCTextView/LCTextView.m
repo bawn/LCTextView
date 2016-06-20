@@ -32,6 +32,7 @@ static CGFloat const LCLeadingOffset = 3.0f;
 
 
 - (void)awakeFromNib{
+    [super awakeFromNib];
     [self initialize];
 }
 
@@ -112,6 +113,11 @@ static CGFloat const LCLeadingOffset = 3.0f;
 
 - (void)textDidChange:(NSNotification *)notification{
     self.placeholderLabel.hidden = self.text.length;
+}
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    [self layoutIfNeeded];
 }
 
 
